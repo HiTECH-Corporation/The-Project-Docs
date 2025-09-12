@@ -1,3 +1,8 @@
 site_name: The Project Docs
+site_url: https://theprojectdocs.pages.dev/
+
+repo_name: HiTECH-Corporation/The-Project-Docs
+repo_url: https://github.com/HiTECH-Corporation/The-Project-Docs
+
 theme:
   name: material
