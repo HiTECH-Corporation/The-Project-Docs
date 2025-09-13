@@ -3,101 +3,114 @@
 Highlights
 
 <style>
-/* grid base (targets mkdocs-material grid.cards structure) */
-.grid.cards > ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Grid: two equal columns on wide screens, one column on small screens */
+.custom-grid {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  align-items: stretch;
+  margin: 0;
+  padding: 0;
 }
 
-/* each card container (li) */
-.grid.cards > ul > li {
+/* Make sure ul/li (if any) have no bullets — we use plain divs, but keep safe rules */
+.custom-grid * { box-sizing: border-box; }
+
+/* Card (each box) */
+.card {
   border: 1px solid transparent;
   border-radius: 12px;
-  padding: 1.25rem;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  text-align: center;
-  transition: border-color .15s ease, box-shadow .15s ease, transform .08s ease;
   background: var(--md-surface-fill);
-  min-height: 160px;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
+  transition: border-color .15s ease, box-shadow .15s ease, transform .08s ease;
+  padding: 1.25rem;
 }
 
-/* make the inner link fill the li so the whole box is clickable */
-.grid.cards > ul > li > a.feature-link {
+/* Make entire card clickable: the link fills the card */
+.card > a.card-link {
   display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 0.6rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  width: 100%;
-  height: 100%;
-  color: inherit;
   text-decoration: none;
+  color: inherit !important; /* avoid blue link color */
 }
 
-/* hover/focus on the li (or the link) */
-.grid.cards > ul > li:hover,
-.grid.cards > ul > li:focus-within {
+/* Hover state: blue border */
+.card:hover,
+.card:focus-within {
   border-color: #0ea5e9;
   box-shadow: 0 8px 24px rgba(14,165,233,0.08);
   transform: translateY(-2px);
 }
 
-/* feature content */
-.feature-card { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.4rem; width:100%; }
-
-/* icon swap behavior (default show light, hide dark) */
-.feature-icon .icon--dark { display: none; }
-.feature-icon .icon--light { display: inline-block; }
-
-/* swap when Material's theme is dark (slate) */
-[data-md-color-scheme="slate"] .feature-icon .icon--dark { display:inline-block; }
-[data-md-color-scheme="slate"] .feature-icon .icon--light { display:none; }
-
-/* SVG sizing: ~70% of the card content width */
-.feature-icon img {
+/* Icon sizing: scale to 70% of card inner width */
+.card .icon {
   width: 70%;
-  max-width: 260px;
+  max-width: 320px; /* absolute cap if needed */
   height: auto;
   display: block;
   margin: 0 auto;
   object-fit: contain;
 }
 
-/* title style under icon */
-.feature-card strong {
-  display: block;
-  margin-top: 0.2rem;
+/* For icons we support light/dark by toggling which img is visible */
+.icon--dark { display: none; }
+.icon--light { display: block; }
+
+/* When Material theme is dark (slate), show dark icons */
+[data-md-color-scheme="slate"] .icon--dark { display: block; }
+[data-md-color-scheme="slate"] .icon--light { display: none; }
+
+/* Title */
+.card .title {
+  margin-top: 0.35rem;
   font-weight: 700;
   font-size: 1rem;
   color: var(--md-sys-typography-on-surface);
+  line-height: 1;
 }
 
-/* small-screen responsiveness */
-@media (max-width: 520px) {
-  .grid.cards > ul { grid-template-columns: 1fr; }
-  .grid.cards > ul > li { min-height: 140px; }
-  .feature-icon img { width: 60%; }
+/* Remove any default list markers if content accidentally rendered as list */
+ul, li { list-style: none; margin: 0; padding: 0; }
+
+/* Responsive: stack to single column on small screens */
+@media (max-width: 720px) {
+  .custom-grid { grid-template-columns: 1fr; }
+  .card { min-height: 140px; }
+  .card .icon { width: 60%; }
 }
 </style>
 
-<div class="grid cards" markdown>
-<a class="feature-link" href="/zenOS/"><div class="feature-card">
-    <span class="feature-icon">
-      <img class="icon icon--light" src="https://cdn.jsdelivr.net/gh/HiTECH-Corporation/The-Project-Docs@latest/assets/zenOS-Nature12.svg" alt="zenOS (light)">
-      <img class="icon icon--dark"  src="https://cdn.jsdelivr.net/gh/HiTECH-Corporation/The-Project-Docs@latest/assets/zenOS-Nature12-dark.svg"  alt="zenOS (dark)">
-    </span>
-    **zenOS**
-</div></a><a class="feature-link" href="/zenOS/"><div class="feature-card">
-    <span class="feature-icon">
-      <img class="icon icon--light" src="https://cdn.jsdelivr.net/gh/HiTECH-Corporation/The-Project-Docs@latest/assets/AuthKit.svg" alt="AuthKit">
-    </span>
-    **AuthKit API**
-</div></a>
+<div class="custom-grid">
+
+  <!-- Card 1: zenOS -->
+  <div class="card" role="group" aria-label="zenOS">
+    <a class="card-link" href="/zenOS/" aria-label="Open zenOS docs">
+      <span class="icon-wrap">
+        <!-- light and dark versions (dark shows when data-md-color-scheme="slate") -->
+        <img class="icon icon--light" src="https://cdn.jsdelivr.net/gh/HiTECH-Corporation/The-Project-Docs@latest/assets/zenOS-Nature12.svg" alt="zenOS">
+        <img class="icon icon--dark"  src="https://cdn.jsdelivr.net/gh/HiTECH-Corporation/The-Project-Docs@latest/assets/zenOS-Nature12-dark.svg" alt="zenOS">
+      </span>
+      <span class="title">zenOS</span>
+    </a>
+  </div>
+
+  <!-- Card 2: AuthKit (single image used for both themes) -->
+  <div class="card" role="group" aria-label="AuthKit API">
+    <a class="card-link" href="/AuthKit%20API/" aria-label="Open AuthKit API docs">
+      <span class="icon-wrap">
+        <!-- Only one image (used both for light & dark) -->
+        <img class="icon" src="https://cdn.jsdelivr.net/gh/HiTECH-Corporation/The-Project-Docs@latest/assets/AuthKit.svg" alt="AuthKit">
+      </span>
+      <span class="title">AuthKit API</span>
+    </a>
+  </div>
+
+</div>
