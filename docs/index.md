@@ -85,8 +85,8 @@ Highlights
 
 - <div class="feature-card">
     <span class="feature-icon">
-      <img class="icon icon--light" src="assets/AuthKit.svg" alt="AuthKit">
-      <img class="icon icon--dark"  src="assets/AuthKit.svg"  alt="AuthKit">
+      <img class="icon icon--light" src="https://cdn.jsdelivr.net/gh/HiTECH-Corporation/The-Project-Docs@latest/assets/AuthKit.svg" alt="AuthKit">
+      <img class="icon icon--dark"  src="https://cdn.jsdelivr.net/gh/HiTECH-Corporation/The-Project-Docs@latest/assets/AuthKit.svg"  alt="AuthKit">
     </span>
     **AuthKit API**
   </div>
