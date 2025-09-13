@@ -6,3 +6,62 @@ repo_url: https://github.com/HiTECH-Corporation/The-Project-Docs
 
 theme:
   name: material
+  
+  logo: assets/logo.svg
+  favicon: assets/favicon.png
+
+  font:
+    text: Inter
+    code: JetBrains Mono
+  
+  palette: 
+    - scheme: default
+      primary: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: blue grey
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+  features:
+    - announce
+        
+plugins:
+  - offline
+
+extra:
+  announcement:
+    dismissible: true
+    text: >
+      **The Project Docs** is currently in beta. Report issues [here](https://github.com/HiTECH-Corporation/The-Project-Docs/issues).
+
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+
+  analytics: 
+    provider: google
+    property: G-XCKYETEH5E
+    
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback!
