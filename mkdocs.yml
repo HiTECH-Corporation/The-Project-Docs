@@ -47,7 +47,8 @@ theme:
 plugins:
   - offline
   - monorepo
-  
+
+extra:
   analytics: 
     provider: google
     property: G-XCKYETEH5E
