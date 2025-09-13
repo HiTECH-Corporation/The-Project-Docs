@@ -7,8 +7,8 @@ repo_url: https://github.com/HiTECH-Corporation/The-Project-Docs
 theme:
   name: material
   
-  logo: docs/assets/logo.svg
-  favicon: docs/assets/favicon.png
+  logo: https://cdn.jsdelivr.net/gh/HiTECH-Corporation/The-Project-Docs@latest/assets/logo.svg
+  favicon: https://cdn.jsdelivr.net/gh/HiTECH-Corporation/The-Project-Docs@latest/assets/favicon.png
 
   font:
     text: Inter
