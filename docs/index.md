@@ -1,17 +1,16 @@
-# Welcome to MkDocs
+# Welcome to The Project Docs
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Highlights
 
-## Commands
+<div class="grid cards" markdown>
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+- :material-file-document: **Document Store**  
+  Store and organize your documents efficiently.
 
-## Project layout
+- :material-magnify: **Search**  
+  Quickly find the information you need.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- :material-account-cog: **Advanced Querying**  
+  Powerful query features for complex needs.
+
+</div>
