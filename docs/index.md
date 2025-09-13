@@ -89,18 +89,15 @@ Highlights
 </style>
 
 <div class="grid cards" markdown>
-- <a class="feature-link" href="/zenOS/"><div class="feature-card">
+<a class="feature-link" href="/zenOS/"><div class="feature-card">
     <span class="feature-icon">
       <img class="icon icon--light" src="https://cdn.jsdelivr.net/gh/HiTECH-Corporation/The-Project-Docs@latest/assets/zenOS-Nature12.svg" alt="zenOS (light)">
       <img class="icon icon--dark"  src="https://cdn.jsdelivr.net/gh/HiTECH-Corporation/The-Project-Docs@latest/assets/zenOS-Nature12-dark.svg"  alt="zenOS (dark)">
     </span>
     **zenOS**
-  </div></a>
-- <a class="feature-link" href="/AuthKit%20API/"><div class="feature-card">
+</div></a><a class="feature-link" href="/zenOS/"><div class="feature-card">
     <span class="feature-icon">
-      <!-- AuthKit: chỉ dùng 1 ảnh chung cho light & dark -->
       <img class="icon icon--light" src="https://cdn.jsdelivr.net/gh/HiTECH-Corporation/The-Project-Docs@latest/assets/AuthKit.svg" alt="AuthKit">
     </span>
     **AuthKit API**
-  </div></a>
-</div>
+</div></a>
