@@ -73,3 +73,8 @@ nav:
       - Overview: zenOS/index.md
   - AuthKIt API:
       - Overview: AuthKit API/index.md
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+
