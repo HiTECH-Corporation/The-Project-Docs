@@ -30,11 +30,7 @@ theme:
 
   features:
     - announce
-        
-plugins:
-  - offline
 
-extra:
   announcement:
     dismissible: true
     text: >
@@ -47,7 +43,11 @@ extra:
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
-
+        
+plugins:
+  - offline
+  - monorepo
+  
   analytics: 
     provider: google
     property: G-XCKYETEH5E
@@ -65,3 +65,10 @@ extra:
           data: 0
           note: >- 
             Thanks for your feedback!
+
+nav:
+  - Home: index.md
+  - zenOS:
+      - Overview: zenOS/index.md
+  - AuthKIt API:
+      - Overview: AuthKit API/index.md
