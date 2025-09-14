@@ -70,20 +70,19 @@ extra:
 
 nav:
   - Home: index.md
-  - 1. Appearance: Appearance.md
   - zenOS:
       - Overview: zenOS/index.md
   - AuthKit API:
     - Welcome: AuthKit API/index.md
     - 'How to use (API v1)':
-      - 'For Telegram': AuthKit API/h2u-avcapi-v1/for-telegram.md
-      - 'For Email': AuthKit API/h2u-avcapi-v1/for-email.md
-      - "Retrieve app's information": AuthKit API/h2u-avcapi-v1/retrieve-apps-information.md
+      - 'For Telegram': AuthKit API/h2u-sakapi-v1/for-telegram.md
+      - 'For Email': AuthKit API/h2u-sakapi-v1/for-email.md
+      - "Retrieve app's information": AuthKit API/h2u-sakapi-v1/retrieve-apps-information.md
     - Projects:
-      - Python: AuthKit API/avcapi-project/python-project.md
-      - Javascript: AuthKit API/avcapi-project/javascript-project.md
-    - 'AppVerify Code API v2 (Coming soon)':
-      - Changelog: AuthKit API/avcapi-v2/changelog.md
+      - Python: AuthKit API/sakapi-project/python-project.md
+      - Javascript: AuthKit API/sakapi-project/javascript-project.md
+    - 'AuthKit API v2 (Coming soon)':
+      - Changelog: AuthKit API/sakapi-v2/changelog.md
 
 markdown_extensions:
   - attr_list

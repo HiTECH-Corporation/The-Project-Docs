@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: AppVerify Code API for Email - OTP Verification
+  title: /AuthKit API for Email - OTP Verification
   description: API endpoint for verifying OTP via email.
   version: 1.0.0
 servers:

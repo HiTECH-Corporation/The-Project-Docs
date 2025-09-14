@@ -1,9 +1,5 @@
 # Welcome to The Project Docs
-
-Highlights
-
 <style>
-/* Grid: two equal columns on wide screens, one column on small screens */
 .custom-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -12,7 +8,6 @@ Highlights
   padding: 0;
 }
 
-/* Card */
 .card {
   border: 1px solid transparent;
   border-radius: 12px;
@@ -26,7 +21,6 @@ Highlights
   padding: 1.25rem;
 }
 
-/* Make entire card clickable */
 .card > a.card-link {
   display: flex;
   width: 100%;
@@ -39,7 +33,6 @@ Highlights
   color: inherit !important;
 }
 
-/* Hover state */
 .card:hover,
 .card:focus-within {
   border-color: #0ea5e9;
@@ -47,11 +40,10 @@ Highlights
   transform: translateY(-2px);
 }
 
-/* ICON as background (single element) */
 .icon-bg {
-  width: 70%;               /* ~70% of the card width */
+  width: 70%;
   max-width: 320px;
-  height: 6.5rem;           /* fixed visual height; adjust as needed */
+  height: 6.5rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -59,7 +51,6 @@ Highlights
   margin: 0 auto;
 }
 
-/* Per-card specific background images (light default) */
 .zen-icon {
   background-image: url("https://cdn.jsdelivr.net/gh/HiTECH-Corporation/The-Project-Docs@latest/assets/zenOS-Nature12.svg");
 }
@@ -67,12 +58,10 @@ Highlights
   background-image: url("https://cdn.jsdelivr.net/gh/HiTECH-Corporation/The-Project-Docs@latest/assets/AuthKit.svg");
 }
 
-/* Swap zen icon to dark variant when Material theme is dark */
 [data-md-color-scheme="slate"] .zen-icon {
   background-image: url("https://cdn.jsdelivr.net/gh/HiTECH-Corporation/The-Project-Docs@latest/assets/zenOS-Nature12-dark.svg");
 }
 
-/* Title */
 .card .title {
   margin-top: 0.35rem;
   font-weight: 700;
@@ -80,10 +69,8 @@ Highlights
   color: var(--md-sys-typography-on-surface);
 }
 
-/* Reset bullets if anything */
 ul, li { list-style: none; margin: 0; padding: 0; }
 
-/* Responsive */
 @media (max-width: 720px) {
   .custom-grid { grid-template-columns: 1fr; }
   .card { min-height: 140px; }
@@ -93,7 +80,6 @@ ul, li { list-style: none; margin: 0; padding: 0; }
 
 <div class="custom-grid">
 
-  <!-- Card 1: zenOS -->
   <div class="card" role="group" aria-label="zenOS">
     <a class="card-link" href="/zenOS/" aria-label="Open zenOS docs">
       <span class="icon-bg zen-icon" aria-hidden="true"></span>
@@ -101,7 +87,6 @@ ul, li { list-style: none; margin: 0; padding: 0; }
     </a>
   </div>
 
-  <!-- Card 2: AuthKit (single image used for both themes) -->
   <div class="card" role="group" aria-label="AuthKit API">
     <a class="card-link" href="/AuthKit%20API/" aria-label="Open AuthKit API docs">
       <span class="icon-bg auth-icon" aria-hidden="true"></span>

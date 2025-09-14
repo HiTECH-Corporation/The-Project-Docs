@@ -1,9 +1,9 @@
 # Python
 
 !!! info ""
-    Note: This is just a reference to learn how **AppVerify Code** works.
+    Note: This is just a reference to learn how **/AuthKit** works.
 
-In this document, I will guide you to create a project in **Python** using **AppVerify Code API** to be able to confirm whether the user entered the correct OTP code sent.
+In this document, I will guide you to create a project in **Python** using **/AuthKit API** to be able to confirm whether the user entered the correct OTP code sent.
 
 Since we are working with **APIs in Python**, we will need to use a module called `requests`, and to protect `AVC AuthKey`, we will need to use the `.env` file and import it using the `dotenv` module. To install, go to Terminal and run the commands:
 
@@ -38,7 +38,7 @@ Next we need to have code to launch **dotenv** to be able to get data from the `
 load_dotenv()
 ```
 
-Since **AppVerify Code** only supports **two RESTful methods**, `GET` and `POST`, the program will ask the user to choose the `GET` or `POST` method. If the user enters a value other than `GET` or `POST`, the program will report an error and ask for re-entry:
+Since **/AuthKit** only supports **two RESTful methods**, `GET` and `POST`, the program will ask the user to choose the `GET` or `POST` method. If the user enters a value other than `GET` or `POST`, the program will report an error and ask for re-entry:
 
 ```python
 while True:
@@ -65,7 +65,7 @@ else:
     params = {"authkey": authkey}
 ```
 
-The program will send an API request to the **AppVerify Code** address with the method as `method` and the param as `params`:
+The program will send an API request to the **/AuthKit** address with the method as `method` and the param as `params`:
 
 ```python
 response = requests.request(method, "https://avc.vercel.app/api/telegram/otpVerification", params=params)
@@ -104,7 +104,7 @@ else:
     print(f"Error: {response.status_code}")
 ```
 
-So that completes a project to verify OTP code sent from **AppVerify Code**. You can get the completed code below:
+So that completes a project to verify OTP code sent from **/AuthKit**. You can get the completed code below:
 
 ```python
 from dotenv import load_dotenv

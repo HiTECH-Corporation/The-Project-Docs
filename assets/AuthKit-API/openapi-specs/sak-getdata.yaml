@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: AppVerify Code API - Get Data
+  title: /AuthKit API - Get Data
   description: API endpoint for retrieving app's information using AVC Authkey.
   version: 1.0.0
 servers:

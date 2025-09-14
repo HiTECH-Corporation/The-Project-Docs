@@ -1,6 +1,6 @@
 # Retrieve app's information
 
 !!! warning ""
-    This API will be migrated to **AVCManager** to enhance security in **AppVerify Code API v2**.
+    This API will be migrated to **AVCManager** to enhance security in **/AuthKit API v2**.
 
 [OAD(https://cdn.jsdelivr.net/gh/HiTECH-Corporation/The-Project-Docs@latest/assets/AuthKit-API/openapi-specs/sak-getdata.yaml)]

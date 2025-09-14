@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: AppVerify Code API for Telegram - OTP Verification
+  title: /AuthKit API for Telegram - OTP Verification
   description: API endpoint for verifying OTP via Telegram bot.
   version: 1.0.0
 servers:
@@ -9,7 +9,7 @@ servers:
 paths:
   /api/telegram/otpVerification:
     post:
-      summary: AppVerify Code API for Telegram - OTP Verification
+      summary: /AuthKit API for Telegram - OTP Verification
       description: Send an OTP code to user via AVCBot.
       parameters:
         - name: authkey
