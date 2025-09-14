@@ -47,7 +47,7 @@ theme:
 plugins:
   - offline
   - monorepo
-  - openapi # Thêm plugin openapi
+  - neoteroi.mkdocs
 
 extra:
   analytics: 
@@ -92,8 +92,8 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tabbed: {alternate_style: true}
-  - pymdownx.highlight # Thêm extension này cho code blocks
-  - pymdownx.snippets # Hữu ích cho việc nhúng các phần của file
-  - def_list # Hữu ích cho các định nghĩa
-  - footnotes # Hữu ích cho chú thích
+  - pymdownx.highlight
+  - pymdownx.snippets
+  - def_list
+  - footnotes
 
