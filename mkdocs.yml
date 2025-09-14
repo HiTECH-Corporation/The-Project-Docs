@@ -69,6 +69,7 @@ extra:
 
 nav:
   - Home: index.md
+  - 1. Appearance: Appearance.md
   - zenOS:
       - Overview: zenOS/index.md
   - AuthKIt API:
