@@ -47,7 +47,7 @@ theme:
 plugins:
   - offline
   - monorepo
-  - neoteroi.mkdocs
+  - neoteroi.mkdocsoad
 
 extra:
   analytics: 
