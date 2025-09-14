@@ -1,0 +1,100 @@
+openapi: 3.0.0
+info:
+  title: AppVerify Code API for Email - OTP Verification
+  description: API endpoint for verifying OTP via email.
+  version: 1.0.0
+servers:
+  - url: https://avc.vercel.app
+    description: Production server
+paths:
+  /api/email/otpVerification:
+    post:
+      summary: OTP Verification via Email
+      description: Sends an OTP code to user's email.
+      parameters:
+        - name: authkey
+          in: query
+          required: true
+          description: Your app's AVC Authkey.
+          schema:
+            type: string
+        - name: email
+          in: query
+          required: true
+          description: User's Email address.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OTP sent successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  restful_method:
+                    type: string
+                    example: POST
+                  response_code:
+                    type: string
+                    example: '200'
+                  status:
+                    type: string
+                    example: found
+                  authkey_info:
+                    type: object
+                    properties:
+                      tg_username:
+                        type: string
+                        description: Your Telegram's username.
+                      tg_appname:
+                        type: string
+                        description: Your Telegram app's name.
+                      tg_appbot:
+                        type: string
+                        description: Username of your app's bot.
+                  sentTo:
+                    type: object
+                    properties:
+                      address:
+                        type: string
+                        description: User's Email address.
+                  verification_code:
+                    type: integer
+                    description: Generated OTP code.
+        '400':
+          description: Missing required parameters.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: The 'authkey' and 'email' parameters are required.
+        '404':
+          description: Authkey not found.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  restful_method:
+                    type: string
+                    example: POST
+                  response_code:
+                    type: string
+                    example: '404'
+                  error:
+                    type: string
+                    example: The provided 'authkey' was not found.
+        '500':
+          description: Internal server error (Database or Email sending failure).
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Unable to connect to MySQL database. Please contact the Administrator.
