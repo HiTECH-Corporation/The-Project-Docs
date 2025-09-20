@@ -47,7 +47,7 @@ theme:
 plugins:
   - offline
   - monorepo
-  - neoteroi.mkdocsoad
+  - render_swagger
 
 extra:
   analytics: 

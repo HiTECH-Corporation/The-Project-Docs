@@ -1,8 +1,5 @@
 # Welcome
 
-!!! note ""
-    **/AuthKit API** will officially be renamed to <img src="https://cdn.jsdelivr.net/gh/HiTECH-Corporation/The-Project-Docs@latest/assets/AuthKit-API/authkit-logo.svg" alt="" data-size="line"> in the upcoming v2. We'll update the changelog soon!
-
 Welcome to **/AuthKit API**. You can find documentation on how to use the API, instructions on creating a simple project with **/AuthKit API**, and more.
 
 Before reading this document, make sure you have an **AVC Authkey** (or `authkey`) to use with the **/AuthKit API**. If you do not have an **AVC Authkey**, you can use **AVC Manager** to create a new **AVC AuthKey**.
